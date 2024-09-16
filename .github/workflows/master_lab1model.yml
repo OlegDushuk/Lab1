@@ -74,5 +74,5 @@ jobs:
         id: deploy-to-webapp
         with:
           app-name: 'lab1Model'
-          slot-name: 'Production'
-          
+      - name: Start application
+        run: gunicorn --bind=0.0.0.0:8000 app:app
